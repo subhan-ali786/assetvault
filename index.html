@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AssetVault - Free 4K Transparent PNGs, VFX & Design Assets</title>
+  <meta name="description" content="Download high-resolution transparent PNG overlays, realistic fire sparks, 3D icons, lighting effects and video editing assets for free on AssetVault.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">⚡</div>
+        <span>Asset<span>Vault</span></span>
+      </a>
+      <div class="nav-badges">
+        <span class="badge-pill">🔥 4K Studio Grade</span>
+        <span class="badge-pill highlight">100% Free PNG</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Animated Glow -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-tag">✨ DIGITAL ASSET ENGINE</div>
+      <h1 class="hero-title">Download Studio-Grade <br><span class="gradient-text">Transparent 4K Assets</span></h1>
+      <p class="hero-subtitle">High-speed, curated VFX overlays, lighting sparks, 3D social badges & textures for video editors and graphic designers.</p>
+      
+      <!-- Instant Live Search Bar -->
+      <div class="search-container">
+        <div class="search-bar-wrapper">
+          <span class="search-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search fire sparks, smoke, 3d youtube, lightning, wings..." oninput="filterAssets()" autocomplete="off">
+          <button id="clearSearchBtn" class="clear-btn" onclick="clearSearch()" style="display:none;">✕</button>
+        </div>
+        <div class="popular-tags">
+          <span class="tag-label">Trending:</span>
+          <button class="quick-tag" onclick="setQuickSearch('fire')">Fire Sparks</button>
+          <button class="quick-tag" onclick="setQuickSearch('smoke')">Smoke</button>
+          <button class="quick-tag" onclick="setQuickSearch('lightning')">Lightning</button>
+          <button class="quick-tag" onclick="setQuickSearch('wings')">Neon Wings</button>
+          <button class="quick-tag" onclick="setQuickSearch('3d')">3D Icons</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter Tabs -->
+  <section class="filter-section">
+    <div class="filter-wrapper">
+      <button class="tab-btn active" data-cat="all" onclick="selectCategory('all', event)">
+        <span class="tab-dot"></span> All Assets
+      </button>
+      <button class="tab-btn" data-cat="vfx" onclick="selectCategory('vfx', event)">
+        <span class="tab-dot"></span> 🔥 VFX & Sparks
+      </button>
+      <button class="tab-btn" data-cat="lighting" onclick="selectCategory('lighting', event)">
+        <span class="tab-dot"></span> ⚡ Lighting & Wings
+      </button>
+      <button class="tab-btn" data-cat="icons" onclick="selectCategory('icons', event)">
+        <span class="tab-dot"></span> 💎 3D Badges
+      </button>
+      <button class="tab-btn" data-cat="textures" onclick="selectCategory('textures', event)">
+        <span class="tab-dot"></span> 📜 Paper & Textures
+      </button>
+    </div>
+  </section>
+
+  <!-- Assets Grid Gallery -->
+  <main class="gallery-wrapper">
+    <div class="gallery-header">
+      <h2 id="galleryHeading">Explore Assets</h2>
+      <span id="assetCount" class="count-pill">Loading assets...</span>
+    </div>
+    <div class="grid-container" id="assetsGrid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Asset<span>Vault</span></h3>
+        <p>Your open-source creative asset repository. Free for personal & commercial edits.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AssetVault. Crafted for Creators.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script>
+    let assetsData = [];
+    let currentCategory = 'all';
+
+    async function loadAssets() {
+      try {
+        const response = await fetch('assets.json');
+        assetsData = await response.json();
+        renderAssets(assetsData);
+      } catch (err) {
+        console.error("Failed to load assets database:", err);
+      }
+    }
+
+    function renderAssets(items) {
+      const grid = document.getElementById('assetsGrid');
+      const countPill = document.getElementById('assetCount');
+      grid.innerHTML = '';
+      countPill.textContent = `${items.length} Assets Found`;
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No assets found</h3>
+            <p>Try searching with another keyword like "fire", "smoke", or "3d"</p>
+            <button class="reset-btn" onclick="resetAllFilters()">View All Assets</button>
+          </div>
+        `;
+        return;
+      }
+
+      items.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'asset-card';
+        card.style.animationDelay = `${(index % 8) * 0.08}s`;
+        
+        card.innerHTML = `
+          <div class="card-media">
+            <span class="format-badge">${item.format}</span>
+            <span class="res-badge">${item.resolution}</span>
+            <img src="${item.preview}" alt="${item.title}" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">${item.title}</h3>
+            <div class="card-meta">
+              <span class="meta-tag">📁 ${item.category.toUpperCase()}</span>
+              <span class="meta-tag">💾 ${item.fileSize}</span>
+            </div>
+            <a href="download.html?id=${item.id}" class="card-btn">
+              <span>Get Free PNG</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterAssets() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const clearBtn = document.getElementById('clearSearchBtn');
+      clearBtn.style.display = query ? 'block' : 'none';
+
+      let filtered = assetsData;
+
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(asset => asset.category === currentCategory);
+      }
+
+      if (query) {
+        filtered = filtered.filter(asset => {
+          const matchTitle = asset.title.toLowerCase().includes(query);
+          const matchCategory = asset.category.toLowerCase().includes(query);
+          const matchTags = asset.tags && asset.tags.some(tag => tag.toLowerCase().includes(query));
+          return matchTitle || matchCategory || matchTags;
+        });
+      }
+
+      renderAssets(filtered);
+    }
+
+    function selectCategory(cat, e) {
+      currentCategory = cat;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      if(e) e.currentTarget.classList.add('active');
+      filterAssets();
+    }
+
+    function setQuickSearch(tag) {
+      document.getElementById('searchInput').value = tag;
+      filterAssets();
+      window.scrollTo({ top: document.querySelector('.filter-section').offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      filterAssets();
+    }
+
+    function resetAllFilters() {
+      document.getElementById('searchInput').value = '';
+      currentCategory = 'all';
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.cat === 'all');
+      });
+      renderAssets(assetsData);
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAssets);
+  </script>
+</body>
+</html>
