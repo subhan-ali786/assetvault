@@ -42,5 +42,60 @@
     "format": "PNG (Alpha)",
     "preview": "images/Cyberpunk Wings.png",
     "downloadUrl": "images/Cyberpunk Wings.png"
+  },
+  {
+    "id": "3d-instagram-badge",
+    "title": "3D Glossy Instagram Verified Badge",
+    "category": "icons",
+    "tags": ["instagram", "verified", "badge", "icon", "social media", "3d", "blue tick"],
+    "resolution": "2048x2048",
+    "fileSize": "1.6 MB",
+    "format": "PNG (Alpha)",
+    "preview": "images/3D Glossy Instagram Verified Badge.png",
+    "downloadUrl": "images/3D Glossy Instagram Verified Badge.png"
+  },
+  {
+    "id": "3d-fire-emoji",
+    "title": "3D Glossy Fire Flame Emoji",
+    "category": "icons",
+    "tags": ["fire", "flame", "emoji", "3d", "glossy", "hot", "trending", "youtube"],
+    "resolution": "2048x2048",
+    "fileSize": "1.4 MB",
+    "format": "PNG (Alpha)",
+    "preview": "images/3D Warning Fire Emoji.png",
+    "downloadUrl": "images/3D Warning Fire Emoji.png"
+  },
+  {
+    "id": "cyberpunk-hud-circle",
+    "title": "Cyberpunk Cyan Hologram HUD Circle",
+    "category": "lighting",
+    "tags": ["hud", "cyberpunk", "hologram", "sci-fi", "circle", "interface", "tech", "glow"],
+    "resolution": "3000x3000",
+    "fileSize": "2.1 MB",
+    "format": "PNG (Alpha)",
+    "preview": "images/Cyberpunk HUD Tech Circle Hologram.png",
+    "downloadUrl": "images/Cyberpunk HUD Tech Circle Hologram.png"
+  },
+  {
+    "id": "golden-bokeh-dust",
+    "title": "Golden Luxury Dust & Bokeh Particles Overlay",
+    "category": "lighting",
+    "tags": ["gold", "bokeh", "particles", "dust", "glitter", "overlay", "lighting", "sparkle"],
+    "resolution": "3840x2160",
+    "fileSize": "2.5 MB",
+    "format": "PNG (Alpha)",
+    "preview": "images/Golden Luxury Dust & Bokeh Particles.png",
+    "downloadUrl": "images/Golden Luxury Dust & Bokeh Particles.png"
+  },
+  {
+    "id": "ripped-paper-edge",
+    "title": "Realistic Ripped Torn Paper Banner Strip",
+    "category": "textures",
+    "tags": ["paper", "torn", "ripped", "edge", "texture", "cutout", "scroll", "white"],
+    "resolution": "3840x2160",
+    "fileSize": "1.9 MB",
+    "format": "PNG (Alpha)",
+    "preview": "images/Ripped Torn Paper Edge Texture.png",
+    "downloadUrl": "images/Ripped Torn Paper Edge Texture.png"
   }
 ]
