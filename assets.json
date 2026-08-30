@@ -1,5 +1,125 @@
 [
   {
+    "id": "3d-chrome-skull",
+    "title": "3D Chrome Metallic Skull",
+    "category": "3d",
+    "filename": "images/3D Chrome Skull.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["3d", "skull", "chrome", "silver", "y2k", "metallic", "render"]
+  },
+  {
+    "id": "3d-royal-gold-crown",
+    "title": "3D Royal Gold Crown",
+    "category": "3d",
+    "filename": "images/3D Royal Gold Crown.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["crown", "gold", "royal", "king", "3d render", "jewels", "luxury"]
+  },
+  {
+    "id": "cyberpunk-hud-ring",
+    "title": "Cyberpunk Hologram HUD Ring",
+    "category": "3d",
+    "filename": "images/Cyberpunk HUD Ring.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["hud", "cyberpunk", "hologram", "sci-fi", "ui", "ring", "neon"]
+  },
+  {
+    "id": "duct-tape-strip",
+    "title": "Glossy Black Duct Tape Strip",
+    "category": "textures",
+    "filename": "images/Duct Tape Strip.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["tape", "duct tape", "black", "adhesive", "strip", "texture"]
+  },
+  {
+    "id": "electric-blue-lightning",
+    "title": "Electric Blue Lightning Arc",
+    "category": "vfx",
+    "filename": "images/Electric Blue Lightning.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["lightning", "electric", "blue", "vfx", "energy", "plasma", "overlay"]
+  },
+  {
+    "id": "floating-dust-bokeh",
+    "title": "Floating Dust Bokeh Overlay",
+    "category": "vfx",
+    "filename": "images/Floating Dust Bokeh.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["dust", "bokeh", "particles", "cinematic", "overlay", "lighting"]
+  },
+  {
+    "id": "green-toxic-smoke",
+    "title": "Green Toxic Smoke Cloud",
+    "category": "vfx",
+    "filename": "images/Green Toxic Smoke.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["smoke", "green", "toxic", "fog", "cloud", "vfx", "overlay"]
+  },
+  {
+    "id": "magic-spell-rune-circle",
+    "title": "Magic Spell Rune Circle",
+    "category": "vfx",
+    "filename": "images/Magic Spell Rune Circle.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["magic", "spell", "rune", "circle", "fantasy", "glowing", "arcane"]
+  },
+  {
+    "id": "neon-pink-heart-sign",
+    "title": "Neon Pink Heart Sign",
+    "category": "3d",
+    "filename": "images/Neon Pink Heart Sign.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["neon", "heart", "pink", "glow", "light", "sign", "love"]
+  },
+  {
+    "id": "old-film-grunge",
+    "title": "35mm Film Grunge Frame",
+    "category": "textures",
+    "filename": "images/Old Film Grunge.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["film", "grunge", "scratches", "frame", "35mm", "vintage", "overlay"]
+  },
+  {
+    "id": "plastic-wrap-texture",
+    "title": "Crinkled Plastic Wrap Texture",
+    "category": "textures",
+    "filename": "images/Plastic Wrap Texture.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["plastic", "wrap", "crinkled", "wrinkled", "overlay", "texture", "glossy"]
+  },
+  {
+    "id": "torn-paper-scrap",
+    "title": "Torn Lined Paper Scrap",
+    "category": "textures",
+    "filename": "images/Torn Paper Scrap.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["paper", "torn", "scrap", "ripped", "notebook", "texture", "cutout"]
+  },
+  {
+    "id": "vhs-glitch-element",
+    "title": "VHS Glitch Distortion Effect",
+    "category": "vfx",
+    "filename": "images/VHS Glitch Element.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["vhs", "glitch", "noise", "scanlines", "distortion", "retro"]
+  },
+  {
+    "id": "watercolor-splash",
+    "title": "Watercolor Paint Splatter",
+    "category": "textures",
+    "filename": "images/Watercolor Splash.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["watercolor", "splash", "paint", "splatter", "artistic", "blue", "purple"]
+  },
+  {
+    "id": "y2k-star-badge",
+    "title": "Y2K Glossy Star Badge",
+    "category": "3d",
+    "filename": "images/Y2K Star Badge.png",
+    "resolution": "4K Ultra HD",
+    "tags": ["y2k", "star", "badge", "retro", "glossy", "pink", "3d icon"]
+  },
+  {
     "id": "fire-sparks",
     "title": "4K Cinematic Fire Sparks & Embers",
     "category": "vfx",
